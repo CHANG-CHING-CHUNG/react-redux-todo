@@ -1,18 +1,6 @@
 import { useDispatch, connect } from "react-redux";
-import { addTodo } from "./redux/actions";
-
-function AddTodo({ addTodo }) {
-  return (
-    <button
-      onClick={() => {
-        addTodo("john");
-      }}
-    >
-      add Todo
-    </button>
-  );
-}
-
+import { addTodo } from "../actions";
+import AddTodo from "../components/AddTodo";
 const mapStateToProps = (state) => {
   return {
     todos: state.todos.todos,
